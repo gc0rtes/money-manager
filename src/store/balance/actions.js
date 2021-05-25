@@ -12,3 +12,9 @@ export const withdraw = (withdrawAmount) => ({
   type: "balance/withdraw",
   payload: withdrawAmount,
 });
+
+//Action type Reset to initial state {amount: 0}
+export const reset = (resetToInitialState) => ({
+  type: "balance/reset",
+  payload: resetToInitialState,
+});
