@@ -6,16 +6,21 @@ import { useState } from "react";
 function App() {
   const dispatch = useDispatch(); //this hook must be called in the root scope of component
   const balance = useSelector(selectBalance);
+  console.log("what is Balance?", balance);
+
   const [customAmount, setCustomAmount] = useState(0);
 
-  //once we submit the form/input customAmount
+  //EventeHandler - once we submit the form/input do this:
   const handleSubmit = (event) => {
     //prevent the page from refreshing
     event.preventDefault();
+
     //what is my customAmount?
     console.log("what is my customAmount?", customAmount);
+
     //Dispatch our customAmount to our reducer store!
     dispatch(deposit(customAmount));
+
     //clean up the input field after submit
     setCustomAmount(0);
   };
@@ -39,7 +44,7 @@ function App() {
       </button>
       <button
         onClick={() => {
-          dispatch(reset()); //there's no diference if I put a0 o an empty ()?
+          dispatch(reset()); //there's no diference if I put 0 o an empty ()?
         }}
       >
         Reset

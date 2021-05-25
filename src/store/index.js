@@ -9,7 +9,7 @@ const store = createStore(
   combineReducers({
     balance: balanceReducer,
   }),
-  enhancer
+  enhancer //to see my dev tools
 );
 
 export default store;

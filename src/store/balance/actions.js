@@ -3,7 +3,7 @@
 
 //Action type deposit +$10
 export const deposit = (depositAmount) => ({
-  type: "balance/deposit",
+  type: "balance/deposit", //> reducer's name/action's name
   payload: depositAmount,
 });
 
@@ -14,7 +14,6 @@ export const withdraw = (withdrawAmount) => ({
 });
 
 //Action type Reset to initial state {amount: 0}
-export const reset = (resetToInitialState) => ({
+export const reset = () => ({
   type: "balance/reset",
-  payload: resetToInitialState,
 });
